@@ -24,7 +24,7 @@ const handleDownload = () => {
 
       return (
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-          <div className=" w-full flex flex-col items-center mt-20 ">
+          <div className=" w-full flex flex-col items-center mt-20 relative">
             <button
               onClick={handleDownload}
               className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer">
