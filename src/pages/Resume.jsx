@@ -27,15 +27,17 @@ const handleDownload = () => {
           <div className=" w-full flex flex-col items-center mt-20 ">
             <button
               onClick={handleDownload}
-              className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer">
+              className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer"
+            >
               Download Resume
             </button>
-                          
-              <Viewer fileUrl="src/assets/resume.pdf" />
-            
+
+            <Viewer fileUrl="https://drive.google.com/file/d/1ldF0PqdpcO_-DzXyYpunKjdn5razSD8O/view?usp=sharing" />
+
             <button
               onClick={handleDownload}
-              className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer">
+              className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer"
+            >
               Download Resume
             </button>
           </div>
