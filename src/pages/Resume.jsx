@@ -31,7 +31,7 @@ const handleDownload = () => {
               Download Resume
             </button>
                           
-              <Viewer fileUrl="src/assets/resume.pdf" />
+              <Viewer fileUrl="/assets/resume.pdf" />
             
             <button
               onClick={handleDownload}

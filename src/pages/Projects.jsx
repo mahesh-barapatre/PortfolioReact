@@ -52,7 +52,7 @@ function Projects() {
           des={
             "Uses ReactJS and a weather API for real-time forecasts. Displays current conditions and dynamic updates, offering a user-friendly experience with concise weather information."
           }
-          img={"src/assets/weather_app.png"}
+          img={"/assets/weather_app.png"}
         />
         <Card
           stack={
@@ -64,7 +64,7 @@ function Projects() {
           des={
             "Elevate your shopping with our MERN Stack E-commerce: delivering a secure and efficient online experience."
           }
-          img={"src/assets/weather_app.png"}
+          img={"/assets/weather_app.png"}
         />
         <Card
           stack={"react js firebase chakra ui javascript auth"}
@@ -74,7 +74,7 @@ function Projects() {
           des={
             "ChatRoom delivers an indispensable and highly efficient solution, revolutionizing communication with its user-friendly interface, real-time messaging, and robust functionality"
           }
-          img={"src/assets/chatRoom.png"}
+          img={"/assets/chatRoom.png"}
         />
         <Card
           stack={"react js axios api javascript css"}
@@ -84,7 +84,7 @@ function Projects() {
           des={
             "A Weather App utilizes a weather forecast API, integrated with ReactJS, providing users with real-time weather information. The application displays current conditions, forecasts, and updates dynamically for a seamless user experience."
           }
-          img={"src/assets/weather_app.png"}
+          img={"/assets/weather_app.png"}
         />
         <Card
           stack={"react js axios api javascript css"}
@@ -94,7 +94,7 @@ function Projects() {
           des={
             "A Weather App utilizes a weather forecast API, integrated with ReactJS, providing users with real-time weather information. The application displays current conditions, forecasts, and updates dynamically for a seamless user experience."
           }
-          img={"src/assets/weather_app.png"}
+          img={"/assets/weather_app.png"}
         />
         <Card
           stack={"react js axios api javascript css"}
@@ -104,7 +104,7 @@ function Projects() {
           des={
             "A Weather App utilizes a weather forecast API, integrated with ReactJS, providing users with real-time weather information. The application displays current conditions, forecasts, and updates dynamically for a seamless user experience."
           }
-          img={"src/assets/weather_app.png"}
+          img={"/assets/weather_app.png"}
         />
       </div>
       <div className="w-full flex flex-col">
