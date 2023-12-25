@@ -4,7 +4,7 @@ function Projects() {
 
   const Blog = ({img, name, url}) => {
     return (
-      <div className="w-1/4 max-h-64 flex flex-col rounded-lg px-4 pt-4 m-3 text-center font-extrabold shadow-lg bg-cyan-50">
+      <div className="w-11/12 sm:w-1/4 h-fit flex flex-col rounded-lg px-4 py-4 m-3 text-center font-extrabold shadow-lg bg-cyan-50">
         <img className='h-2/5 object-cover' src={img} alt="blog pic" />
         <span className="text-black text-lf my-1">{name}</span>
         <button
@@ -18,7 +18,7 @@ function Projects() {
 
   const Card = ({img, name, des, stack, url, github}) => {
     return (
-      <div className="w-72 space-y-5 text-center flex flex-col m-2 p-4 bg-indigo-100 rounded-lg shadow-md">
+      <div className="w-11/12 sm:w-72 space-y-5 text-center flex flex-col m-2 p-4 bg-indigo-100 rounded-lg shadow-md">
         <img src={img} alt="project image" />
         <span className="text-lg">{name}</span>
         <p className='text-gray-500'>{des}</p>
@@ -41,9 +41,9 @@ function Projects() {
   return (
     <div className="w-full flex flex-col bg-blue-50">
       <div className="w-full uppercase text-3xl text-blue-500 mt-20 font-extrabold text-center my-5">
-        my projects
+        {"<my projects/>"}
       </div>
-      <div className="w-full flex space-x-6 flex-wrap font-extrabold">
+      <div className="w-full flex justify-evenly sm:space-x-6 flex-wrap font-extrabold">
         <Card
           stack={"react js axios api javascript css"}
           url={"https://delightful-melba-2e5263.netlify.app/"}
@@ -109,9 +109,9 @@ function Projects() {
       </div>
       <div className="w-full flex flex-col">
         <div className="w-full font-extrabold uppercase text-3xl text-blue-500 text-center my-5">
-          my Blogs
+          {"<my Blogs/>"}
         </div>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <Blog
             name={"Embracing AI as a Productivity Ally: A Collaborative Future"}
             url={

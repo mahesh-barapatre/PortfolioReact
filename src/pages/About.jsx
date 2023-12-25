@@ -12,7 +12,7 @@ function About() {
 
   const Card = ({ icon, title, para }) => {
     return (
-      <div className="w-1/3 m-5 space-y-2 py-4 px-8 text-center rounded-lg shadow-md bg-cyan-50 bg- flex flex-col items-center text-black">
+      <div className="w-full my-5 sm:m-5 space-y-2 py-4 px-8 text-center rounded-lg shadow-md bg-cyan-50 bg- flex flex-col items-center text-black">
         <img className='w-8' src={icon} alt="logo" />
         <span>{title}</span>
         <p className='text-blue-500'>{para}</p>
@@ -23,14 +23,14 @@ function About() {
 
   return (
     <div className="flex flex-col p-4 mt-16 w-full bg-blue-50 font-extrabold text-black">
-      <div className="w-full flex">
-        <div className="w-1/2">
+      <div className="w-full flex flex-col sm:flex-row">
+        <div className="w-full sm:w-1/2">
           <img
             src="https://www.roessner.tech/static/media/about.d8fe852f6a9badcd8616.png"
             alt="img"
           />
         </div>
-        <div className="w-1/2 flex flex-col justify-evenly">
+        <div className="w-full sm:w-1/2 flex flex-col justify-evenly">
           <span className="text-3xl">
             Know Who <span className="text-blue-500">I'm</span>
           </span>
@@ -64,9 +64,9 @@ function About() {
       </div>
       <div className="w-full flex flex-col">
         <div className="w-full uppercase text-3xl text-blue-500 text-center my-5">
-          my skillset
+          {"<my skillset/>"}
         </div>
-        <div className="w-full flex flex-wrap space-x-4 space-y-4">
+        <div className="w-full flex flex-wrap justify-evenly space-x-4 space-y-4">
           <Skill
             img={
               "https://rahulkp15.onrender.com/static/media/react.cc8a3326a9a43518b033b383390f00d0.svg"
@@ -123,9 +123,9 @@ function About() {
       </div>
       <div className="w-full flex flex-col">
         <div className="w-full uppercase text-3xl text-blue-500 text-center my-10">
-          my interest and hobbies
+          {"<my interest and hobbies/>"}
         </div>
-        <div className="flex w-full">
+        <div className="flex flex-col sm:flex-row w-full">
           <Card
             icon={"https://www.svgrepo.com/show/2918/student-reading.svg"}
             title={"Reading"}

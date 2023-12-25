@@ -15,13 +15,13 @@ function Footer() {
   const mediumUrl = "https://medium.com/@maheshbarapatre14";  
 
   return (
-    <div className="w-full text-xl flex bg-blue-50 p-4 font-extrabold text-blue-500">
-      <div className="w-2/3 flex">
-        © 2023 <PiBracketsAngle className="mt-1 mr-1" /> with{" "}
-        <FaHeart className="mt-1 mx-1" /> by Mahesh Barapatre • All Rights
-        Reserved
+    <div className="w-full sm:text-xl text-xs flex flex-col sm:flex-row bg-blue-50 p-4 font-extrabold text-blue-500">
+      <div className="sm:w-2/3 w-full flex mb-5 sm:mb-0">
+        © 2023 <PiBracketsAngle className="mt-1 mr-1 hidden sm:inline-block" />{" "}
+        with <FaHeart className="mt-1 mx-1 hidden sm:inline-block" /> by Mahesh
+        Barapatre • All Rights Reserved
       </div>
-      <div className="flex w-1/3 justify-evenly text-gray-500">
+      <div className="flex sm:w-1/3 w-full justify-evenly text-gray-500">
         <IoLogoLinkedin
           onClick={() => window.open(linkedinUrl, "_blank")}
           className="hover:text-gray-700 hover:scale-110 ease-in-out duration-100 cursor-pointer"
