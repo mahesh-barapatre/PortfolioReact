@@ -32,7 +32,7 @@ const handleDownload = () => {
             </button>
                           
               <Viewer fileUrl="/assets/Mahesh_Cv.pdf" />
-            
+
             <button
               onClick={handleDownload}
               className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer">
