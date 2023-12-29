@@ -11,13 +11,14 @@ const optnCss =
 const activeCss =
   "w-full cursor-pointer text-lg border-2 border-black text-black font-extrabold flex py-3 px-6 transform ease-in-out duration-100";
 
-function Nav() {
+function Nav({setNavShow}) {
   const [active, setActive] = useState("/");
   const navigate = useNavigate();
 
   const navHandler = (path) => {
     navigate(path);
     setActive(path);
+    setNavShow(prev=>!prev);
     // console.log(active)
   };
 

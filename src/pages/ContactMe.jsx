@@ -25,7 +25,7 @@ function ContactMe() {
           <IoLocationSharp size={35} />
           FIND ME @ <br/>
           <span
-            className='text-blue-500'>
+            className='text-blue-500 cursor-pointer'>
           linktr.ee
           </span>
         </div>
