@@ -11,7 +11,7 @@ const handleDownload = () => {
   // Create a link element
   const link = document.createElement("a");
   // Set the href attribute to the PDF URL
-  link.href = "src/assets/resume.pdf";
+  link.href = "/assets/resume.pdf";
   // Set the download attribute to specify the default filename
   link.download = "maheshCV.pdf";
   // Append the link to the document
@@ -31,10 +31,8 @@ const handleDownload = () => {
               Download Resume
             </button>
                           
+              <Viewer fileUrl="/assets/Mahesh_Cv.pdf" />
 
-              <Viewer fileUrl="/assets/resume.pdf" />
-
-            
             <button
               onClick={handleDownload}
               className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer">

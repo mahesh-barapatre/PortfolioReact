@@ -18,22 +18,36 @@ function Projects() {
 
   const Card = ({img, name, des, stack, url, github}) => {
     return (
-      <div className="w-11/12 sm:w-72 space-y-5 text-center flex flex-col m-2 p-4 bg-indigo-100 rounded-lg shadow-md">
+      <div className="w-11/12 sm:w-72 space-y-1 text-center flex flex-col m-2 bg-indigo-100 shadow-md">
         <img src={img} alt="project image" />
         <span className="text-lg">{name}</span>
         <p className='text-gray-500'>{des}</p>
         <span className='uppercase text-md'>{stack}</span>
         <div className="flex w-full">
 
+          {url && 
         <button
-          onClick={() => window.open(url, _blank)}
+          onClick={() => window.open(url, "_blank")}
           className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer"
         >Live Demo</button>
+          }
         <button
-          onClick={() => window.open(github, _blank)}
+          onClick={() => window.open(github, "_blank")}
           className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer"
         >GitHub</button>
         </div>
+      </div>
+    );
+
+  }
+  const ExpCard = ({ img, org, des, role }) => {
+    return (
+      <div className="w-11/12 sm:w-72 space-y-1 flex flex-col m-5 bg-blue-50 text-black p-2 shadow-md">
+        <img src={img} alt="work image" />
+        <span className="text-xl uppercase font-bold">{org}</span>
+        <p className='text-gray-500 uppercase font-bold'>{role}</p>
+        <span className='text-sm font-semibold'>{des}</span>
+        
       </div>
     );
   }
@@ -43,70 +57,97 @@ function Projects() {
       <div className="w-full uppercase text-3xl text-blue-500 mt-20 font-extrabold text-center my-5">
         {"<my projects/>"}
       </div>
-      <div className="w-full flex justify-evenly sm:space-x-6 flex-wrap font-extrabold">
+      <div className="w-full flex sm:space-x-6 flex-wrap font-extrabold">
         <Card
-          stack={"react js axios api javascript css"}
-          url={"https://delightful-melba-2e5263.netlify.app/"}
-          github={"https://github.com/mahesh-barapatre/Weather-App/"}
-          name={"Weather App"}
+          stack={"MERN tailwind-css redux nodemailer"}
+          url={"https://woo-ecommerce.vercel.app/"}
+          github={"https://github.com/mahesh-barapatre/Woo-Ecommerce"}
+          name={"Woo eCommerce"}
           des={
-            "Uses ReactJS and a weather API for real-time forecasts. Displays current conditions and dynamic updates, offering a user-friendly experience with concise weather information."
+            "E-commerce responsive website with reviews, auth, seperate user+ admin dashboards"
           }
-          img={"/assets/weather_app.png"}
+          img={"/assets/woo.png"}
         />
         <Card
-          stack={
-            "rect js node js express mongodb tailwnd css rrdux-toolkit nodemailer"
-          }
-          url={"https://delightful-melba-2e5263.netlify.app/"}
-          github={"https://github.com/mahesh-barapatre/Weather-App/"}
-          name={"Woo Commerce"}
+          stack={"MERN tailwind-css cloudiary"}
+          url={""}
+          github={"https://github.com/mahesh-barapatre/Spotify-Clone"}
+          name={"Spotify Clone"}
           des={
-            "Elevate your shopping with our MERN Stack E-commerce: delivering a secure and efficient online experience."
+            "Full-featured Spotify clone with user authentication, playlist creation, song upload, and responsive design."
           }
-          img={"/assets/weather_app.png"}
+          img={"/assets/spotify.png"}
         />
         <Card
-          stack={"react js firebase chakra ui javascript auth"}
+          stack={"react-js firebase auth chakra-ui"}
           url={"https://genuine-madeleine-393c15.netlify.app/"}
           github={"https://github.com/mahesh-barapatre/ChatRoom"}
           name={"ChatRoom"}
           des={
-            "ChatRoom delivers an indispensable and highly efficient solution, revolutionizing communication with its user-friendly interface, real-time messaging, and robust functionality"
+            " with real-time messaging, user authentication, and intuitive interface."
           }
           img={"/assets/chatRoom.png"}
         />
         <Card
-          stack={"react js axios api javascript css"}
-          url={"https://delightful-melba-2e5263.netlify.app/"}
-          github={"https://github.com/mahesh-barapatre/Weather-App/"}
-          name={"Spotify Clone"}
+          stack={"react-js tailwind-css react-pdf"}
+          url={"https://mahesh14.netlify.app/"}
+          github={"https://github.com/mahesh-barapatre/PortfolioReact"}
+          name={"Portfolio"}
           des={
-            "A Weather App utilizes a weather forecast API, integrated with ReactJS, providing users with real-time weather information. The application displays current conditions, forecasts, and updates dynamically for a seamless user experience."
+            "Sleek portfolio showcasing skills, projects, and achievements with responsive design and contact form."
           }
-          img={"/assets/weather_app.png"}
+          img={"/assets/portfolio.png"}
         />
         <Card
-          stack={"react js axios api javascript css"}
+          stack={"react-js weather-api js css"}
           url={"https://delightful-melba-2e5263.netlify.app/"}
           github={"https://github.com/mahesh-barapatre/Weather-App/"}
-          name={"Blogging App"}
+          name={"Weather App"}
           des={
-            "A Weather App utilizes a weather forecast API, integrated with ReactJS, providing users with real-time weather information. The application displays current conditions, forecasts, and updates dynamically for a seamless user experience."
-          }
-          img={"/assets/weather_app.png"}
-        />
-        <Card
-          stack={"react js axios api javascript css"}
-          url={"https://delightful-melba-2e5263.netlify.app/"}
-          github={"https://github.com/mahesh-barapatre/Weather-App/"}
-          name={"Chatting App"}
-          des={
-            "A Weather App utilizes a weather forecast API, integrated with ReactJS, providing users with real-time weather information. The application displays current conditions, forecasts, and updates dynamically for a seamless user experience."
+            "Weather app displaying current conditions, forecast, and user-friendly interface with location-based data."
           }
           img={"/assets/weather_app.png"}
         />
       </div>
+
+      <div className="w-full flex flex-col">
+        <div className="w-full font-extrabold uppercase text-3xl text-blue-500 text-center my-5">
+          {"<Work and events/>"}
+        </div>
+        <div className="flex flex-col sm:flex-row">
+          <ExpCard
+            org={"sync intern's"}
+            des={
+              "During the React internship, I crafted four prototypes, elevating its success by enhancing user experience, improving platform efficiency, expanding functionality, and actively contributing to a collaborative and innovative development environment."
+            }
+            role={"react intern"}
+            img={
+              "https://static.wixstatic.com/media/5d3a75_a74999aa4fc34c90a7e45de2b3dc9b2a~mv2.png/v1/fill/w_228,h_102,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20230706_224542.png"
+            }
+          />
+          <ExpCard
+            org={"GSSOC'23"}
+            des={
+              "Amplified project influence in GSSoC via pivotal feature implementations, bug resolutions, documentation updates, and heightened community engagement."
+            }
+            role={"contributor"}
+            img={
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLI_bHVdU3CuIKlodozio_XYMC0rwZWL4hQw&usqp=CAU"
+            }
+          />
+          <ExpCard
+            org={"hacktoberfest'23"}
+            des={
+              "Elevated project impact in Hacktoberfest through key feature enhancements, issue resolutions, documentation updates, and increased community engagement."
+            }
+            role={"contributor"}
+            img={
+              "https://image.slidesharecdn.com/hacktoberfest23slidedeck-231002155230-6fbc60ae/85/hacktoberfest-23-slide-deckpptx-1-320.jpg?cb=1696262469"
+            }
+          />
+        </div>
+      </div>
+
       <div className="w-full flex flex-col">
         <div className="w-full font-extrabold uppercase text-3xl text-blue-500 text-center my-5">
           {"<my Blogs/>"}

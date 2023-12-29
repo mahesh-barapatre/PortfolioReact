@@ -29,7 +29,7 @@ function App() {
       
       <div className="flex flex-row h-full w-screen bg-blue-50">
         <div className={`sm:w-1/4 absolute z-50 w-4/5 sm:static sm:left-0 transform ease-in-out duration-500 ${view}`}>
-          <Nav />
+          <Nav setNavShow={setNavShow } />
         </div>
         <div className="sm:w-3/4 w-full h-screen overflow-y-scroll">
           <Header />
