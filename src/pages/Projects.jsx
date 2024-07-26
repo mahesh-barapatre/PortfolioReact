@@ -1,113 +1,143 @@
-import React from 'react'
+import React from "react";
 
 function Projects() {
+  const projectDetails = [
+    {
+      stack: "Next.js, Gemini API, shadcn UI, PostgreSQL, Clerk auth",
+      url: "https://craft-genie-ai.vercel.app/",
+      github: "https://github.com/mahesh-barapatre/CraftGenie.AI",
+      name: "CraftGenie.AI",
+      des: "a tool that generates high-quality text content, enhancing productivity for marketers, developers, and creators.",
+      img: "/assets/craftgenie.png",
+    },
+    {
+      stack: "Next.js, Gemini API, shadcn UI, PostgreSQL, Clerk auth",
+      url: "https://interview-saathi-nine.vercel.app/",
+      github: "https://github.com/mahesh-barapatre/Interview-Saathi",
+      name: "Interview-Saathi.AI",
+      des: "Mock Interview app facilitating mock interviews for various roles, rounds, technologies, and experience levels.",
+      img: "/assets/saathi.png",
+    },
+    {
+      stack: "React.js, WebRTC, Socket.io, Node.js, Tailwind CSS",
+      url: "https://sarthi2-0.vercel.app/",
+      github: "https://github.com/mahesh-barapatre/Sarthi2.0",
+      name: "Sarthi2.0",
+      des: "a problem discussion platform with collaborative tools for seamless communication of ideas.",
+      img: "/assets/sarthi.png",
+    },
+    {
+      stack: "React.js Mongodb tailwind-css redux nodemailer",
+      url: "https://woo-ecommerce.vercel.app/",
+      github: "https://github.com/mahesh-barapatre/Woo-Ecommerce",
+      name: "Woo eCommerce",
+      des: "E-commerce responsive website with reviews, auth, separate user+admin dashboards",
+      img: "/assets/woo.png",
+    },
+    {
+      stack: "MERN tailwind-css cloudinary",
+      url: "",
+      github: "https://github.com/mahesh-barapatre/Spotify-Clone",
+      name: "Spotify Clone",
+      des: "Full-featured Spotify clone with user authentication, playlist creation, song upload, and responsive design.",
+      img: "/assets/spotify.png",
+    },
+    {
+      stack: "react-js firebase auth chakra-ui",
+      url: "https://genuine-madeleine-393c15.netlify.app/",
+      github: "https://github.com/mahesh-barapatre/ChatRoom",
+      name: "ChatRoom",
+      des: "Real-time messaging, user authentication, and intuitive interface.",
+      img: "/assets/chatRoom.png",
+    },
+    {
+      stack: "react-js tailwind-css react-pdf",
+      url: "https://mahesh14.netlify.app/",
+      github: "https://github.com/mahesh-barapatre/PortfolioReact",
+      name: "Portfolio",
+      des: "Sleek portfolio showcasing skills, projects, and achievements with responsive design and contact form.",
+      img: "/assets/portfolio.png",
+    },
+    {
+      stack: "react-js weather-api js css",
+      url: "https://delightful-melba-2e5263.netlify.app/",
+      github: "https://github.com/mahesh-barapatre/Weather-App/",
+      name: "Weather App",
+      des: "Weather app displaying current conditions, forecast, and user-friendly interface with location-based data.",
+      img: "/assets/weather_app.png",
+    },
+  ];
 
-  const Blog = ({img, name, url}) => {
+  const Blog = ({ img, name, url }) => {
     return (
       <div className="w-11/12 sm:w-1/4 h-fit flex flex-col rounded-lg px-4 py-4 m-3 text-center font-extrabold shadow-lg bg-cyan-50">
-        <img className='h-2/5 object-cover' src={img} alt="blog pic" />
+        <img className="h-2/5 object-cover" src={img} alt="blog pic" />
         <span className="text-black text-lf my-1">{name}</span>
         <button
-          onClick={()=>window.open(url, "_blank")}
-          className="text-lg w-fit mx-auto rounded p-1 my-1 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer">
+          onClick={() => window.open(url, "_blank")}
+          className="text-lg w-fit mx-auto rounded p-1 my-1 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer"
+        >
           View Blog
         </button>
       </div>
     );
-  }
+  };
 
-  const Card = ({img, name, des, stack, url, github}) => {
+  const Card = ({ img, name, des, stack, url, github }) => {
     return (
-      <div className="w-11/12 sm:w-72 space-y-1 text-center flex flex-col m-2 bg-indigo-100 shadow-md">
-        <img src={img} alt="project image" />
-        <span className="text-lg">{name}</span>
-        <p className='text-gray-500'>{des}</p>
-        <span className='uppercase text-md'>{stack}</span>
-        <div className="flex w-full">
-
-          {url && 
-        <button
-          onClick={() => window.open(url, "_blank")}
-          className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer"
-        >Live Demo</button>
-          }
-        <button
-          onClick={() => window.open(github, "_blank")}
-          className="text-lg w-fit mx-auto rounded p-1 my-3 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer"
-        >GitHub</button>
+      <div className="w-72 space-y-3 text-center flex flex-col m-2 bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img
+          src={img}
+          alt={`${name} project image`}
+          className="w-full h-40 object-cover bg-gray-200"
+        />
+        <div className="p-3">
+          <h3 className="text-lg font-semibold mb-1">{name}</h3>
+          <p className="text-gray-600 mb-2 text-sm">{des}</p>
+          <span className="block text-xs text-gray-500 mb-3">{stack}</span>
+          <div className="flex justify-center gap-2">
+            {url && (
+              <button
+                onClick={() => window.open(url, "_blank")}
+                className="text-sm px-3 py-1 font-bold bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700 transition-colors"
+                aria-label={`View live demo of ${name}`}
+              >
+                Live Demo
+              </button>
+            )}
+            <button
+              onClick={() => window.open(github, "_blank")}
+              className="text-sm px-3 py-1 font-bold bg-gray-800 text-white rounded-md shadow-sm hover:bg-gray-900 transition-colors"
+              aria-label={`View GitHub repository of ${name}`}
+            >
+              GitHub
+            </button>
+          </div>
         </div>
       </div>
     );
+  };
 
-  }
   const ExpCard = ({ img, org, des, role }) => {
     return (
       <div className="w-11/12 sm:w-72 space-y-1 flex flex-col m-5 bg-blue-50 text-black p-2 shadow-md">
         <img src={img} alt="work image" />
         <span className="text-xl uppercase font-bold">{org}</span>
-        <p className='text-gray-500 uppercase font-bold'>{role}</p>
-        <span className='text-sm font-semibold'>{des}</span>
-        
+        <p className="text-gray-500 uppercase font-bold">{role}</p>
+        <span className="text-sm font-semibold">{des}</span>
       </div>
     );
-  }
+  };
 
   return (
     <div className="w-full flex flex-col bg-blue-50">
       <div className="w-full uppercase text-3xl text-blue-500 mt-20 font-extrabold text-center my-5">
         {"<my projects/>"}
       </div>
-      <div className="w-full flex sm:space-x-6 flex-wrap font-extrabold">
-        <Card
-          stack={"MERN tailwind-css redux nodemailer"}
-          url={"https://woo-ecommerce.vercel.app/"}
-          github={"https://github.com/mahesh-barapatre/Woo-Ecommerce"}
-          name={"Woo eCommerce"}
-          des={
-            "E-commerce responsive website with reviews, auth, seperate user+ admin dashboards"
-          }
-          img={"/assets/woo.png"}
-        />
-        <Card
-          stack={"MERN tailwind-css cloudiary"}
-          url={""}
-          github={"https://github.com/mahesh-barapatre/Spotify-Clone"}
-          name={"Spotify Clone"}
-          des={
-            "Full-featured Spotify clone with user authentication, playlist creation, song upload, and responsive design."
-          }
-          img={"/assets/spotify.png"}
-        />
-        <Card
-          stack={"react-js firebase auth chakra-ui"}
-          url={"https://genuine-madeleine-393c15.netlify.app/"}
-          github={"https://github.com/mahesh-barapatre/ChatRoom"}
-          name={"ChatRoom"}
-          des={
-            " with real-time messaging, user authentication, and intuitive interface."
-          }
-          img={"/assets/chatRoom.png"}
-        />
-        <Card
-          stack={"react-js tailwind-css react-pdf"}
-          url={"https://mahesh14.netlify.app/"}
-          github={"https://github.com/mahesh-barapatre/PortfolioReact"}
-          name={"Portfolio"}
-          des={
-            "Sleek portfolio showcasing skills, projects, and achievements with responsive design and contact form."
-          }
-          img={"/assets/portfolio.png"}
-        />
-        <Card
-          stack={"react-js weather-api js css"}
-          url={"https://delightful-melba-2e5263.netlify.app/"}
-          github={"https://github.com/mahesh-barapatre/Weather-App/"}
-          name={"Weather App"}
-          des={
-            "Weather app displaying current conditions, forecast, and user-friendly interface with location-based data."
-          }
-          img={"/assets/weather_app.png"}
-        />
+      <div className="w-full justify-start items-center flex sm:space-x-6 flex-wrap font-extrabold">
+        {projectDetails.map((project, index) => {
+          return <Card {...project} key={index} />;
+        })}
       </div>
 
       <div className="w-full flex flex-col">
@@ -179,4 +209,4 @@ function Projects() {
   );
 }
 
-export default Projects
+export default Projects;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { FaHeart } from "react-icons/fa6";
 import { PiBracketsAngle } from "react-icons/pi";
 import { IoLogoLinkedin } from "react-icons/io";
@@ -7,17 +7,16 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { TbBrandLeetcode } from "react-icons/tb";
 import { IoLogoMedium } from "react-icons/io5";
 function Footer() {
-
-  const linkedinUrl = "https://www.linkedin.com/in/mahesh-barapatre-a93731225/";  
-  const gitUrl = "https://github.com/mahesh-barapatre";  
-  const leetcodeUrl = "https://leetcode.com/mahesh_b14/";  
-  const twitterUrl = "https://twitter.com/doit_mahesh";  
-  const mediumUrl = "https://medium.com/@maheshbarapatre14";  
+  const linkedinUrl = "https://www.linkedin.com/in/mahesh-barapatre-a93731225/";
+  const gitUrl = "https://github.com/mahesh-barapatre";
+  const leetcodeUrl = "https://leetcode.com/doit_mahesh/";
+  const twitterUrl = "https://twitter.com/doit_mahesh";
+  const mediumUrl = "https://medium.com/@maheshbarapatre14";
 
   return (
     <div className="w-full sm:text-xl text-xs flex flex-col sm:flex-row bg-blue-50 p-4 font-extrabold text-blue-500">
       <div className="sm:w-2/3 w-full flex mb-5 sm:mb-0">
-        © 2023 <PiBracketsAngle className="mt-1 mr-1 hidden sm:inline-block" />{" "}
+        © 2024 <PiBracketsAngle className="mt-1 mr-1 hidden sm:inline-block" />{" "}
         with <FaHeart className="mt-1 mx-1 hidden sm:inline-block" /> by Mahesh
         Barapatre • All Rights Reserved
       </div>
@@ -47,4 +46,4 @@ function Footer() {
   );
 }
 
-export default Footer
+export default Footer;
