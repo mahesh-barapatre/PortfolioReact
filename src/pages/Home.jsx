@@ -9,7 +9,7 @@ function Home() {
           <br />
           This is <span className="text-blue-500">Mahesh Barapatre</span>
           <br />
-          I'm a <span className="text-blue-500">MERN DEVELOPER</span>.
+          I'm a <span className="text-blue-500">WEB DEVELOPER</span>.
         </div>
         <div className="sm:w-1/2 w-full">
           <img

@@ -1,25 +1,53 @@
-import React from 'react'
+import React from "react";
 
 function About() {
-
-  const Skill = ({img}) => {
+  const Skill = ({ img }) => {
     return (
       <div className="shadow-md flex justify-center items-center w-32 h-36 p-4 rounded-lg object-cover bg-cyan-50 hover:scale-110 transform ease-in-out duration-100">
-          <img src={img} alt="skill" />
+        <img src={img} alt="skill" />
       </div>
-    )
-  }
+    );
+  };
+
+  const skillsIcon = [
+    "https://rahulkp15.onrender.com/static/media/react.cc8a3326a9a43518b033b383390f00d0.svg",
+
+    "https://rahulkp15.onrender.com/static/media/javascript.e7363ab96f901afdeb86963dd6a44ce2.svg",
+
+    "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+
+    "https://rahulkp15.onrender.com/static/media/nodejs.41a0e1af4b72f61e8496e4877da39db3.svg",
+
+    "https://rahulkp15.onrender.com/static/media/mongodb.219f7ae3c9abd445d6b82c941ad73702.svg",
+
+    "https://rahulkp15.onrender.com/static/media/express.1862ae411f8c1bde13179f1713fd3d06.svg",
+
+    "https://rahulkp15.onrender.com/static/media/html.2b36cd2143b950115530edfde54f21ac.svg",
+
+    "https://rahulkp15.onrender.com/static/media/css3.d51e893b4eecd56b38b570e498bd1712.svg",
+
+    "https://rahulkp15.onrender.com/static/media/c++.7764d449dcf4f28e2275.png",
+
+    "https://rahulkp15.onrender.com/static/media/git.ebf48408b5ae3138009c3d44ff956f56.svg",
+
+    "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
+    "https://www.svgrepo.com/show/354202/postman-icon.svg",
+    "https://www.svgrepo.com/show/331760/sql-database-generic.svg",
+    "https://www.svgrepo.com/show/349342/docker.svg",
+    "https://www.svgrepo.com/show/374144/typescript.svg",
+    "https://www.svgrepo.com/show/376344/python.svg",
+    "https://www.vectorlogo.zone/logos/postgresql/postgresql-vertical.svg",
+  ];
 
   const Card = ({ icon, title, para }) => {
     return (
       <div className="w-full my-5 sm:m-5 space-y-2 py-4 px-8 text-center rounded-lg shadow-md bg-cyan-50 bg- flex flex-col items-center text-black">
-        <img className='w-8' src={icon} alt="logo" />
+        <img className="w-8" src={icon} alt="logo" />
         <span>{title}</span>
-        <p className='text-blue-500'>{para}</p>
+        <p className="text-blue-500">{para}</p>
       </div>
-    )
-  }
-
+    );
+  };
 
   return (
     <div className="flex flex-col p-4 mt-16 w-full bg-blue-50 font-extrabold text-black">
@@ -46,7 +74,8 @@ function About() {
             </span>
             with{" "}
             <span className="text-gray-500">
-              hands-on experience in developing web applications with MERN stack{" "}
+              hands-on experience in developing full-stack web applications with
+              AI integrations{" "}
             </span>
             .
           </p>
@@ -66,59 +95,10 @@ function About() {
         <div className="w-full uppercase text-3xl text-blue-500 text-center my-5">
           {"<my skillset/>"}
         </div>
-        <div className="w-full flex flex-wrap justify-evenly space-x-4 space-y-4">
-          <Skill
-            img={
-              "https://rahulkp15.onrender.com/static/media/react.cc8a3326a9a43518b033b383390f00d0.svg"
-            }
-          />
-          <Skill
-            img={
-              "https://rahulkp15.onrender.com/static/media/javascript.e7363ab96f901afdeb86963dd6a44ce2.svg"
-            }
-          />
-          <Skill
-            img={
-              "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-            }
-          />
-          <Skill
-            img={
-              "https://rahulkp15.onrender.com/static/media/nodejs.41a0e1af4b72f61e8496e4877da39db3.svg"
-            }
-          />
-          <Skill
-            img={
-              "https://rahulkp15.onrender.com/static/media/mongodb.219f7ae3c9abd445d6b82c941ad73702.svg"
-            }
-          />
-          <Skill
-            img={
-              "https://rahulkp15.onrender.com/static/media/express.1862ae411f8c1bde13179f1713fd3d06.svg"
-            }
-          />
-          <Skill
-            img={
-              "https://rahulkp15.onrender.com/static/media/html.2b36cd2143b950115530edfde54f21ac.svg"
-            }
-          />
-          <Skill
-            img={
-              "https://rahulkp15.onrender.com/static/media/css3.d51e893b4eecd56b38b570e498bd1712.svg"
-            }
-          />
-          <Skill
-            img={
-              "https://rahulkp15.onrender.com/static/media/c++.7764d449dcf4f28e2275.png"
-            }
-          />
-          <Skill
-            img={
-              "https://rahulkp15.onrender.com/static/media/git.ebf48408b5ae3138009c3d44ff956f56.svg"
-            }
-          />
-          <Skill img={"https://sivanathan.info/asset/redux.svg"} />
-          <Skill img={"https://www.svgrepo.com/show/354202/postman-icon.svg"} />
+        <div className="w-full flex flex-wrap justify-start items-center space-x-4 space-y-4">
+          {skillsIcon.map((img, index) => (
+            <Skill key={index} img={img} />
+          ))}
         </div>
       </div>
       <div className="w-full flex flex-col">
@@ -157,4 +137,4 @@ function About() {
   );
 }
 
-export default About
+export default About;
