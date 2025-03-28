@@ -11,14 +11,14 @@ const optnCss =
 const activeCss =
   "w-full cursor-pointer text-lg border-2 border-black text-black font-extrabold flex py-3 px-6 transform ease-in-out duration-100";
 
-function Nav({setNavShow}) {
+function Nav({ setNavShow }) {
   const [active, setActive] = useState("/");
   const navigate = useNavigate();
 
   const navHandler = (path) => {
     navigate(path);
     setActive(path);
-    setNavShow(prev=>!prev);
+    setNavShow((prev) => !prev);
     // console.log(active)
   };
 
@@ -29,23 +29,38 @@ function Nav({setNavShow}) {
         alt="img"
         // className="hidden sm:block"
       />
-      <div className={active === '/' ? activeCss : optnCss } onClick={() => navHandler("/")}>
+      <div
+        className={active === "/" ? activeCss : optnCss}
+        onClick={() => navHandler("/")}
+      >
         <SiHomebridge className="pr-3" size={"35"} />
         Home
       </div>
-      <div onClick={() => navHandler("/about")} className={active === '/about' ? activeCss : optnCss }>
+      <div
+        onClick={() => navHandler("/about")}
+        className={active === "/about" ? activeCss : optnCss}
+      >
         <HiOutlineUserCircle className="pr-3" size={"35"} />
         About me
       </div>
-      <div onClick={() => navHandler("/projects")} className={active === '/projects' ? activeCss : optnCss }>
+      <div
+        onClick={() => navHandler("/projects")}
+        className={active === "/projects" ? activeCss : optnCss}
+      >
         <GrProjects className="pr-3" size={"35"} />
-        Projects And Blogs
+        Projects And Exp
       </div>
-      <div onClick={() => navHandler("/resume")} className={active === '/resume' ? activeCss : optnCss }>
+      <div
+        onClick={() => navHandler("/resume")}
+        className={active === "/resume" ? activeCss : optnCss}
+      >
         <CgLoadbarSound className="pr-3" size={"35"} />
         Resume
       </div>
-      <div onClick={() => navHandler("/contact")} className={active === '/contact' ? activeCss : optnCss }>
+      <div
+        onClick={() => navHandler("/contact")}
+        className={active === "/contact" ? activeCss : optnCss}
+      >
         <MdContacts className="pr-3" size={"35"} />
         Contact me
       </div>
