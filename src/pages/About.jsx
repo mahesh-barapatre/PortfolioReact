@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   const Skill = ({ img }) => {
     return (
-      <div className="shadow-md flex justify-center items-center w-32 h-36 p-4 rounded-lg object-cover bg-cyan-50 hover:scale-110 transform ease-in-out duration-100">
+      <div className="shadow-md flex justify-center items-center m-2 w-28 sm:32 lg:w-36 h-36 p-4 rounded-lg object-cover bg-cyan-50 hover:scale-110 transform ease-in-out duration-100">
         <img src={img} alt="skill" />
       </div>
     );
@@ -41,7 +41,7 @@ function About() {
 
   const Card = ({ icon, title, para }) => {
     return (
-      <div className="w-full my-5 sm:m-5 space-y-2 py-4 px-8 text-center rounded-lg shadow-md bg-cyan-50 bg- flex flex-col items-center text-black">
+      <div className="w-full my-5 space-y-2 py-4 px-8 text-center rounded-lg shadow-md bg-cyan-50 flex flex-col items-center text-black">
         <img className="w-8" src={icon} alt="logo" />
         <span>{title}</span>
         <p className="text-blue-500">{para}</p>
@@ -95,7 +95,7 @@ function About() {
         <div className="w-full uppercase text-3xl text-blue-500 text-center my-5">
           {"<my skillset/>"}
         </div>
-        <div className="w-full flex flex-wrap justify-start items-center space-x-4 space-y-4">
+        <div className="w-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
           {skillsIcon.map((img, index) => (
             <Skill key={index} img={img} />
           ))}
@@ -105,7 +105,7 @@ function About() {
         <div className="w-full uppercase text-3xl text-blue-500 text-center my-10">
           {"<my interest and hobbies/>"}
         </div>
-        <div className="flex flex-col sm:flex-row w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
           <Card
             icon={"https://www.svgrepo.com/show/2918/student-reading.svg"}
             title={"Reading"}

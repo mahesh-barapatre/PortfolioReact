@@ -11,6 +11,7 @@ function Home() {
           <br />
           I'm a <span className="text-blue-500">WEB DEVELOPER</span>.
         </div>
+
         <div className="sm:w-1/2 w-full">
           <img
             src="https://rahulkp15.onrender.com/static/media/dashboard.48011af8a598cfeec00f.gif"
@@ -18,6 +19,7 @@ function Home() {
           />
         </div>
       </div>
+
       <div className="w-11/12 p-5 my-3 flex">
         <img
           src="https://pbs.twimg.com/profile_images/1660113718804643840/tI-L_tia_400x400.jpg"

@@ -68,24 +68,24 @@ function Projects() {
     },
   ];
 
-  const Blog = ({ img, name, url }) => {
-    return (
-      <div className="w-11/12 sm:w-1/4 h-fit flex flex-col rounded-lg px-4 py-4 m-3 text-center font-extrabold shadow-lg bg-cyan-50">
-        <img className="h-2/5 object-cover" src={img} alt="blog pic" />
-        <span className="text-black text-lf my-1">{name}</span>
-        <button
-          onClick={() => window.open(url, "_blank")}
-          className="text-lg w-fit mx-auto rounded p-1 my-1 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer"
-        >
-          View Blog
-        </button>
-      </div>
-    );
-  };
+  // const Blog = ({ img, name, url }) => {
+  //   return (
+  //     <div className="w-11/12 sm:w-1/4 h-fit flex flex-col rounded-lg px-4 py-4 m-3 text-center font-extrabold shadow-lg bg-cyan-50">
+  //       <img className="h-2/5 object-cover" src={img} alt="blog pic" />
+  //       <span className="text-black text-lf my-1">{name}</span>
+  //       <button
+  //         onClick={() => window.open(url, "_blank")}
+  //         className="text-lg w-fit mx-auto rounded p-1 my-1 font-extrabold bg-blue-600 text-white hover:to-blue-500 cursor-pointer"
+  //       >
+  //         View Blog
+  //       </button>
+  //     </div>
+  //   );
+  // };
 
   const Card = ({ img, name, des, stack, url, github }) => {
     return (
-      <div className="w-72 space-y-3 text-center flex flex-col m-2 bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div className="w-full space-y-3 text-center flex flex-col bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
         <img
           src={img}
           alt={`${name} project image`}
@@ -120,7 +120,7 @@ function Projects() {
 
   const ExpCard = ({ img, org, des, role }) => {
     return (
-      <div className="w-11/12 sm:w-72 space-y-1 flex flex-col m-5 bg-blue-50 text-black p-2 shadow-md">
+      <div className="w-11/12 sm:w-72 space-y-1 flex flex-col bg-blue-50 text-black p-2 shadow-md">
         <img src={img} alt="work image" />
         <span className="text-xl uppercase font-bold">{org}</span>
         <p className="text-gray-500 uppercase font-bold">{role}</p>
@@ -134,7 +134,7 @@ function Projects() {
       <div className="w-full uppercase text-3xl text-blue-500 mt-20 font-extrabold text-center my-5">
         {"<my projects/>"}
       </div>
-      <div className="w-full justify-start items-center flex sm:space-x-6 flex-wrap font-extrabold">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-3 font-extrabold p-4">
         {projectDetails.map((project, index) => {
           return <Card {...project} key={index} />;
         })}
@@ -144,7 +144,7 @@ function Projects() {
         <div className="w-full font-extrabold uppercase text-3xl text-blue-500 text-center my-5">
           {"<Work and events/>"}
         </div>
-        <div className="flex flex-col sm:flex-row">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-3 p-4">
           <ExpCard
             org={"sync intern's"}
             des={
@@ -178,7 +178,8 @@ function Projects() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col">
+      {/* blogs section */}
+      {/* <div className="w-full flex flex-col">
         <div className="w-full font-extrabold uppercase text-3xl text-blue-500 text-center my-5">
           {"<my Blogs/>"}
         </div>
@@ -204,7 +205,7 @@ function Projects() {
             }
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
