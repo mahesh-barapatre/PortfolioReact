@@ -130,7 +130,7 @@ function Projects() {
   };
 
   return (
-    <div className="w-full flex flex-col bg-blue-50">
+    <div className="w-full flex flex-col bg-blue-50 mt-8 md:mt-4">
       <div className="w-full uppercase text-3xl text-blue-500 mt-20 font-extrabold text-center my-5">
         {"<my projects/>"}
       </div>
