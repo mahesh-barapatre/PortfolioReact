@@ -50,7 +50,7 @@ function About() {
   };
 
   return (
-    <div className="flex flex-col p-4 md:mt-16 mt-20 w-full bg-blue-50 font-extrabold text-black">
+    <div className="flex flex-col p-4 mt-24 md:mt-20 w-full bg-blue-50 font-extrabold text-black">
       <div className="w-full flex flex-col sm:flex-row">
         <div className="w-full sm:w-1/2">
           <img
